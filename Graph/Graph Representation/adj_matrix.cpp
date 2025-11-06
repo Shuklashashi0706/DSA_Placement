@@ -1,17 +1,48 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
 using namespace std;
-int main(){
-    int i,j,n,m;
-    cout<<"Enter number of nodes:"<<endl;
-    cin>>n;
-    cout<<"Enter no of edges:"<<endl;
-    cin>>m;
-    int graph[n][n];
-    for(i=0;i<m;i++){
-        int u,v;
-        cin>>u>>v;
-        graph[u][v]=1;
-        graph[v][u]=1;
+
+int main()
+{
+  // // undirected unweighted graph
+  // int vertex, edges;
+  // cin>>vertex>>edges;
+  // vector<vector<int>> graph(vertex, vector<int>(vertex, 0));
+  // int u, v;
+  // for (int i = 0; i < edges; i++)
+  // {
+  //   cin >> u >> v;
+  //   graph[u][v] = 1;
+  //   graph[v][u] = 1;
+  // }
+  // for (int i = 0; i < vertex; i++)
+  // {
+  //   for (int j = 0; j < vertex; j++)
+  //   {
+  //     cout << graph[i][j] << "\t";
+  //   }
+  //   cout << endl;
+  // }
+
+   // directed unweighted graph
+  int vertex, edges;
+  cin>>vertex>>edges;
+  vector<vector<int>> graph(vertex, vector<int>(vertex, 0));
+  int u,v;
+  for (int i = 0; i < edges; i++)
+  {
+    cin >> u >> v;
+    graph[u][v] = 1;
+  }
+  for (int i = 0; i < vertex; i++)
+  {
+    for (int j = 0; j < vertex; j++)
+    {
+      cout << graph[i][j] << "\t";
     }
+    cout << endl;
+  }
+
+
   return 0;
 }

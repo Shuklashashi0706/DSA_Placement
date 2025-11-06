@@ -11,7 +11,7 @@ class Solution
 public:
     int splitArray(vector<int> &nums, int k)
     {
-        int n = nums.size()-1;
+        int n = nums.size() - 1;
         int start = *max_element(nums.begin(), nums.end());
         int end = reduce(nums.begin(), nums.end());
         int ans;
@@ -46,8 +46,8 @@ public:
 int main()
 {
     class Solution obj;
-    vector<int> nums{10,20,30,40};
-    int ans = obj.splitArray(nums,2);
-    cout<<ans<<endl;
+    vector<int> nums{10, 20, 30, 40};
+    int ans = obj.splitArray(nums, 3);
+    cout << ans << endl;
     return 0;
 }
